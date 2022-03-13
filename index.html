@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Ticket App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="body-container">
+        <header>
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #51a1da">
+                <a class="navbar-brand" href="#">Flight App</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <main>
+
+            <section id="flight-direction">
+                <div id="flight-submit-form">
+                    <h1>Choose Your Fastest Destination To Every Airport</h1>
+                    <form id="submit-form">
+                        <div class="submit-form-container">
+                            <fieldset>
+                                <label for="from">From: </label>
+                                <select name="from" id="from" required>
+                                    <option value="ATH">Athens, Greece (ATH)</option>
+                                    <option value="BSL">Saint-Louis, France (BSL)</option>
+                                    <option value="BFS">Belfast, Great Britain (BFS)</option>
+                                    <option value="BLQ">Bologna, Italy (BLQ)</option>
+                                    <option value="BTS">Bratislava, Slovakia (BTS)</option>
+                                    <option value="BRS">Bristol, Great Britain (BRS)</option>
+                                    <option value="CRL">Charleroi, Belgium (CRL)</option>
+                                    <option value="BUD">Budapest, Hungary (BUD)</option>
+                                    <option value="DUB">Dublin, Ireland (DUB)</option>
+                                    <option value="EDI">Edinburg, Great Britain (EDI)</option>
+                                    <option value="EIN">Eindhoven, Netherlands (EIN)</option>
+                                    <option value="GLA">Glasgow, Great Britain (GLA)</option>
+                                    <option value="HAM">Hamburg, Germany (HAM)</option>
+                                    <option value="CTA">Catania, Italy (CTA)</option>
+                                    <option value="KEF">Keflavík, Iceland (KEF)</option>
+                                    <option value="CGN">Köln, Germany (CGN)</option>
+                                    <option value="SUF">Calabria, Italy (SUF)</option>
+                                    <option value="LCA">Larnaca, Cyprus (LCA)</option>
+                                    <option value="LPL">Liverpool, Great Britain (LPL)</option>
+                                    <option value="LIS">Lisboa, Portugal (LIS)</option>
+                                    <option value="LTN">London, Great Britain (LTN)</option>
+                                    <option value="STN">Stansted, Great Britain (STN)</option>
+                                    <option value="MAD">Madrid, Spain (MAD)</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <label for="finish">To: </label>
+                                <select name="finish" id="finish" required>
+                                    <option value="ATH">Athens, Greece (ATH)</option>
+                                    <option value="BSL">Saint-Louis, France (BSL)</option>
+                                    <option value="BFS">Belfast, Great Britain (BFS)</option>
+                                    <option value="BLQ">Bologna, Italy (BLQ)</option>
+                                    <option value="BTS">Bratislava, Slovakia (BTS)</option>
+                                    <option value="BRS">Bristol, Great Britain (BRS)</option>
+                                    <option value="CRL">Charleroi, Belgium (CRL)</option>
+                                    <option value="BUD">Budapest, Hungary (BUD)</option>
+                                    <option value="DUB">Dublin, Ireland (DUB)</option>
+                                    <option value="EDI">Edinburg, Great Britain (EDI)</option>
+                                    <option value="EIN">Eindhoven, Netherlands (EIN)</option>
+                                    <option value="GLA">Glasgow, Great Britain (GLA)</option>
+                                    <option value="HAM">Hamburg, Germany (HAM)</option>
+                                    <option value="CTA">Catania, Italy (CTA)</option>
+                                    <option value="KEF">Keflavík, Iceland (KEF)</option>
+                                    <option value="CGN">Köln, Germany (CGN)</option>
+                                    <option value="SUF">Calabria, Italy (SUF)</option>
+                                    <option value="LCA">Larnaca, Cyprus (LCA)</option>
+                                    <option value="LPL">Liverpool, Great Britain (LPL)</option>
+                                    <option value="LIS">Lisboa, Portugal (LIS)</option>
+                                    <option value="LTN">London, Great Britain (LTN)</option>
+                                    <option value="STN">Stansted, Great Britain (STN)</option>
+                                    <option value="MAD">Madrid, Spain (MAD)</option>
+                                </select>
+                            </fieldset>
+                            <input type="submit" class="btn btn-primary" style="font-size: 1.5rem" value="Order Now"></input>
+                            </div>
+                        </div>
+                        <div id="table-container " class="container mt-5">
+                          <h3 class="text-center mb-3" style="color: white">Fastest Paths</h3>
+                          <table class="table table-striped table-hover table-bordered" style="background-color: white">
+                              <thead class="table-dark">
+                                <tr>
+                                  <th scope="col">From</th>
+                                  <th scope="col">To</th>
+                                  <th scope="col">Fastest Avaliable Path</th>
+                                </tr>
+                              </thead>
+                              <tbody id="flight-list">
+                              </tbody>
+                            </table>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>

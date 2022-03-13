@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary-blue: #2596be;
+    --primary-red: #be4d25;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/plane-hero.jpg");
+    height: 100%;
+    background-position: center;
+    max-width: 100%;
+}
+
+
+#flight-submit-form {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    color: rgb(120, 243, 116);
+}
+
+#flight-submit-form fieldset {
+    display: block;
+    padding: 10px;
+    border-radius: 12px;
+    resize: vertical;
+}
+
+#choose-date fieldset {
+    display: block;
+    padding: 10px;
+    border-radius: 1px;
+    resize: vertical;
+    width: 75%;
+    color: blue;
+}
+
+
+
+#flight-submit-form h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 1000;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+.choose-date {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    padding: 10px;
+}
+
+
+.alert {
+    width: 25%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
